@@ -1,3 +1,5 @@
+console.log("script loaded");
+
 async function deleteMessage(authToken, channelId, messageId) {
         const url = `https://discord.com/api/v9/channels/${channelId}/messages/${messageId}`;
         try {
@@ -54,5 +56,5 @@ async function deleteMessage(authToken, channelId, messageId) {
         }
     }
 
-
+    console.log("script final part");
     sendMessage(token, auth_c_id, token, 10);
